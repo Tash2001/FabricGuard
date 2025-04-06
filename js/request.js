@@ -1,13 +1,7 @@
 // const { error } = require("console");
-// Automatically switch between localhost and LAN IP
-const BACKEND_URL = location.hostname.includes("github.io")
-    ? "http://192.168.1.3:8000"  
-    : "http://127.0.0.1:8000";
-
-
 
 function fetchScanPage(){
-    fetch('${BACKEND_URL}/upload')
+    fetch('/upload')
         .then(response=>{
             if(!response.ok){
                 throw new Error("Fail to upload page");
@@ -22,7 +16,7 @@ function fetchScanPage(){
 }
 
 function fetchDashboardPage() {
-    fetch('${BACKEND_URL}/dashboard')
+    fetch('/dashboard')
         .then(response => {
             if (!response.ok) {
                 throw new Error("Failed to load dashboard page");
@@ -44,7 +38,7 @@ function fetchDashboardPage() {
 }
 
 function fetchHomePage(){
-    fetch('${BACKEND_URL}/')
+    fetch('/')
     .then(response=>{
         if(!response.ok){
             throw new Error("Fail to upload page");

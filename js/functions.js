@@ -1,7 +1,3 @@
-// Automatically switch between localhost and LAN IP
-const BACKEND_URL = location.hostname.includes("github.io")
-    ? "http://192.168.1.42:8000" 
-    : "http://127.0.0.1:8000";
 
 
 AOS.init();
@@ -158,7 +154,7 @@ function scanImage() {
                               </div>`;
 
     // Send the image to the backend for processing
-    fetch("${BACKEND_URL}",apiEndpoint, {
+    fetch(apiEndpoint, {
         method: "POST",
         body: formData
     })
@@ -175,7 +171,7 @@ function scanImage() {
                     <div class="col-md-8">
                         <h3 class="fw-bold ${resultInfo.color}">${resultInfo.name}</h3>
                         <p class="fs-5"><strong>Confidence:</strong> <span class="text-info">${data.confidance}</span></p>
-                        <a href="${BACKEND_URL}/download-report/${data.scan_id}" target="_blank" class="btn btn-outline-primary mt-3">
+                        <a href="/download-report/${data.scan_id}" target="_blank" class="btn btn-outline-primary mt-3">
                             <i class="bi bi-download"></i> Download Report
                         </a>
                     </div>
@@ -202,7 +198,7 @@ function clearResults() {
 // dashboard
 function loadDashboardData() {
     console.log("Fetching dashboard data...");
-    fetch("${BACKEND_URL}/dashboard-data")
+    fetch("/dashboard-data")
         .then(response => response.json())
         .then(data => {
             createChart("dailyChart", data.daily);

@@ -40,6 +40,7 @@ img {
     font-weight: 500;
     color: var(--charcoal);
     transition: 0.3s;
+    
 }
 
 .nav-link:hover {
@@ -138,4 +139,8 @@ section {
     border: 1px solid var(--steel-gray);
     background-color: var(--soft-white);
     color: var(--teal-accent);
+}
+.btn-outline-primary {
+    border-radius: 20px;
+    font-weight: 500;
 }

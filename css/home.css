@@ -7,16 +7,36 @@
 }
 
 /* HERO SECTION */
-.hero {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url('../assets/images/hero.png'); /* Update with your image path */
-  background-size: cover;
+/* .hero { */
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url('../assets/images/hero.png'); Update with your image path */
+  /* background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: var(--soft-white);
   min-height: 70vh;
   display: flex;
   align-items: center;
+} */
+
+.hero-section h1 {
+  font-size: 3rem;
 }
+
+@media (max-width: 768px) {
+  .hero-section {
+      text-align: center;
+      padding: 4rem 1rem;
+  }
+
+  .hero-section .row {
+      justify-content: center !important;
+  }
+
+  .hero-section .col-lg-6 {
+      text-align: center !important;
+  }
+}
+
 
 /* BUTTONS */
 #get-started-btn, #download-app-btn {
@@ -48,8 +68,9 @@
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
 }
 
+
 /* FEATURE CARDS */
-#diseases, #ripeness, #quality {
+#defect, #texture, #quality {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,11 +83,11 @@
 }
 
 /* Icon Colors */
-#diseases i {
+#defect i {
   color: #4CA1A3; /* Custom teal accent for Defect Detection */
 }
 
-#ripeness i {
+#texture i {
   color: #6C757D; /* Custom gray for Texture Consistency */
 }
 
@@ -75,7 +96,7 @@
 }
 
 /* Hover Effect */
-#diseases:hover, #ripeness:hover, #quality:hover {
+#defect:hover, #texture:hover, #quality:hover {
   transform: scale(1.1);
   background-color: var(--soft-white);
   border-radius: 50%;
@@ -87,7 +108,7 @@
     height: 200px;
     width: 200px;
   }
-  #diseases, #ripeness, #quality {
+  #defect, #texture, #quality {
     font-size: 2rem;
   }
 }
@@ -149,7 +170,7 @@
   font-size: 2rem;
 }
 .cta-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url('../assets/images/cta.png'); /* Update with your image path */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url('../assets/images/cta.png'); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
